@@ -2,12 +2,12 @@ package com.owale
 
 import java.io.File;
 
-object ff{
+object utils{
 
   def getLines(file: File) = scala.io.Source.fromFile(file).getLines().toList
 
-  def grep(pattern: String) = {
-    val filesHere = (new File(".")).listFiles
+  def grep(pattern: String , where:String = ".") = {
+    val filesHere = (new File(where)).listFiles
     for(file<- filesHere
       if file.isFile
       if file.getName.endsWith(".scala");
@@ -18,3 +18,4 @@ object ff{
   }
 
 }
+

@@ -1,6 +1,6 @@
 package com.owale
 
-import ff.grep
+import utils.grep
 
 object Summer extends App{
   grep(".*gcd*.")
